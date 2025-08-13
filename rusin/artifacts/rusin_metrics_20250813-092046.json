@@ -1,0 +1,13 @@
+{
+  "final_train_loss": 0.2662743031978607,
+  "final_val_loss": 0.3012025058269501,
+  "final_val_acc": 0.87,
+  "epochs": 5,
+  "batch_size": 64,
+  "learning_rate": 0.1,
+  "hidden_sizes": [
+    32,
+    32
+  ],
+  "checkpoint_path": "/workspace/rusin/artifacts/rusin_checkpoint_20250813-092046.npz"
+}
