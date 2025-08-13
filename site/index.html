@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ChatGPT5 — GitHub Pages</title>
+    <meta name="description" content="Минималистичный чат с нейросетью ChatGPT5 с потоковыми ответами и публикацией на GitHub Pages." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div class="brand">
+          <div class="brand__logo">🤖</div>
+          <div class="brand__text">
+            <div class="brand__title">ChatGPT5</div>
+            <div class="brand__subtitle">демо-чат на GitHub Pages</div>
+          </div>
+        </div>
+        <div class="header__actions">
+          <button id="newChatBtn" class="btn btn--ghost" title="Новый чат">🗑️ Новый чат</button>
+          <a class="btn btn--ghost" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </header>
+
+      <main id="chat" class="chat" aria-live="polite" aria-busy="false"></main>
+
+      <footer class="composer">
+        <div class="composer__row">
+          <textarea id="prompt" class="composer__input" rows="1" placeholder="Задайте вопрос… (Shift+Enter — перенос строки)"></textarea>
+          <button id="sendBtn" class="btn btn--primary" title="Отправить">Отправить</button>
+        </div>
+        <div class="composer__meta">
+          <label class="meta__item">
+            Модель:
+            <select id="modelSelect">
+              <option value="gpt-4o-mini" selected>gpt-4o-mini</option>
+              <option value="gpt-4o">gpt-4o</option>
+              <option value="gpt-4.1-mini">gpt-4.1-mini</option>
+            </select>
+          </label>
+          <span class="meta__hint">Настройте адрес прокси в <code>site/config.js</code></span>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./config.js"></script>
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
